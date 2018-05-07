@@ -9,7 +9,11 @@ public class HackerRank {
                 {"4", "M", "5"},
                 {"5", "C", "100", "10"}
         };
+        List<Integer> res = getSalaryList(workers);
+        System.out.println(res);
+    }
 
+    public static List<Integer> getSalaryList(String[][] workers) {
         // build map id -> String of worker
         Map<String, Worker> mapIdToWorker = new HashMap<>();
 
@@ -34,7 +38,8 @@ public class HackerRank {
         for (Map.Entry<String, Worker> e : mapIdToWorker.entrySet()) {
             res.add(e.getValue().getSalary());
         }
-        System.out.println(res);
+
+        return res;
     }
 
     static class Worker {
