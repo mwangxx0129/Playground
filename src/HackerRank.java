@@ -3,7 +3,7 @@ import java.util.*;
 public class HackerRank {
     public static void main(String[] args) {
         String[][] workers = {
-                {"1", "F", "7500"},
+                {"1", "F",  "7500"},
                 {"2", "C", "100","20"},
                 {"3", "M", "1,2"},
                 {"4", "M", "5"},
