@@ -5,11 +5,16 @@ import java.util.Map;
 public class LoggingSystem {
     private Node root = new Node();
     class Node {
+        Character c;
         int freq;
         Map<Character, Node> neighbors;
         Node() {
             this.freq = 0;
             this.neighbors = new HashMap<>();
+        }
+        @Override
+        public String toString() {
+            return this.c + "(" + this.freq + ")";
         }
     }
 
@@ -19,26 +24,26 @@ public class LoggingSystem {
         for (char c : logs) {
             cur.neighbors.putIfAbsent(c, new Node());
             cur = cur.neighbors.get(c);
+            cur.c = c;
             ++ cur.freq;
         }
     }
 
-    public void dfs(Node root, StringBuilder sb, List<String> res) {
-//        for (Map.Entry<Character, Node> cur : root.neighbors.entrySet()) {
-//            cur.getValue()
-//        }
-        // |-
-        // |-|-A(2)
-        // |-|-|-B(2)
-        // |-|-|-|-C(1)
-        // |-|-|-|-A(1)
+    public void dfs(Node cur, StringBuilder sb) {
+        System.out.println(sb.toString() + cur.toString());
+        sb.append("|-");
+        for (Map.Entry<Character, Node> next : cur.neighbors.entrySet()) {
+            dfs(next.getValue(), sb);
+        }
+        sb.delete(sb.length() - 2, sb.length());
     }
 
     public static void main(String[] args) {
         LoggingSystem loggingSystem = new LoggingSystem();
         loggingSystem.insert("ABC".toCharArray());
         loggingSystem.insert("ABA".toCharArray());
-        System.out.println("...");
+        loggingSystem.insert("BBA".toCharArray());
+        loggingSystem.dfs(loggingSystem.root, new StringBuilder());
     }
 
 
