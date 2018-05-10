@@ -1,4 +1,10 @@
 # Playground
+
+TODO:
+- [ ] alien dic
+- [ ] can Win
+- [ ] route traversal
+
 ## Graph
 ### Def. of graph
 Map<String, List<String>>
