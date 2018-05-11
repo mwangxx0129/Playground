@@ -45,6 +45,4 @@ public class LoggingSystem {
         loggingSystem.insert("BBA".toCharArray());
         loggingSystem.dfs(loggingSystem.root, new StringBuilder());
     }
-
-
 }
