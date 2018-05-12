@@ -13,8 +13,6 @@ public class WordBreak {
         System.out.println(result);
     }
 
-
-
     // 方法一：
     public static boolean wordBreak(String s, List<String> wordDict) {
         Set<String> dict = new HashSet<>(wordDict);
