@@ -39,6 +39,5 @@ public class WildcardMatching {
          else
             return mm[s.length()][p.length()] = firstMatch &&
                     isValid(s.substring(1), p.substring(1), mm);
-
     }
 }
