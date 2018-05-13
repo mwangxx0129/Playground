@@ -1,5 +1,12 @@
 public class WildcardMatching {
-// 递归版 超时
+
+    public static void main(String[] args) {
+        WildcardMatching wildcardMatching = new WildcardMatching();
+        boolean res = wildcardMatching.isMatch("adceb", "*a*b");
+        System.out.println(res);
+    }
+
+//    // 递归版 超时
 //    public boolean isMatch(String s, String p) {
 //        if ( p.length() == 0) return s.length() == 0;
 //        boolean firstMatch = s.length() > 0 &&
@@ -12,15 +19,8 @@ public class WildcardMatching {
 //            return firstMatch && isMatch(s.substring(1), p.substring(1));
 //        }
 //    }
-//
 
-// 递归 + memory
-    public static void main(String[] args) {
-        WildcardMatching wildcardMatching = new WildcardMatching();
-        boolean res = wildcardMatching.isMatch("adceb", "*a*b");
-        System.out.println(res);
-    }
-
+    // 递归 + memory
     public boolean isMatch(String s, String p) {
         int m = s.length();
         int n = p.length();
