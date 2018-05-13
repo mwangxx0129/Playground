@@ -15,5 +15,7 @@ public class Main {
         System.out.println(bt.next().val);
 
         System.out.println("Hello World!");
+        String s = "asdf";
+        System.out.println(s.substring(1));
     }
 }
