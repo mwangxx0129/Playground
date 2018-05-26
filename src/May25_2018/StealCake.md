@@ -13,7 +13,7 @@
  ```
  - [Input types](#input types)
  - Return type
- int
+`int`
  
  - Max runtime (in seconds)
  - Companies
