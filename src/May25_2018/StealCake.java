@@ -67,9 +67,6 @@ public class StealCake {
             }
             dp[weight] = max;
         }
-        for (int i = 0; i < dp.length; ++ i) {
-            System.out.println(i + "\t" + dp[i]);
-        }
         return dp[maxWeight];
     }
 }
