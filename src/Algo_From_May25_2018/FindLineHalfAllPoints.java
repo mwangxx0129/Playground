@@ -1,7 +1,6 @@
-package May25_2018;
+package Algo_From_May25_2018;
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 public class FindLineHalfAllPoints {

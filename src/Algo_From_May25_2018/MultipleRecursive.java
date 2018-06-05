@@ -1,4 +1,4 @@
-package May25_2018;
+package Algo_From_May25_2018;
 
 import java.util.Arrays;
 import java.util.HashMap;
