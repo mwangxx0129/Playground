@@ -1,3 +1,10 @@
+//题目：backjack / 21 点， 给你一堆牌，从1到10，每张牌被抽的概率为1/10，问你dealer busted的概率是多少？
+//        1. 如果dealer点数和不到17，将继续从牌堆抽牌；
+//        2. 如果dealer点数和是在17-21，dealer stands，不继续抽牌;
+//        3. 如果dealer点数和大于21，dealer busted；
+//        条件2和条件3视为结束抽牌。
+//
+//        实现个LostProbability(int sum)的方法，返回输掉概率。sum是当前点数。求大米，谢谢
 public class BlackJack {
     public static void main(String[] args) {
         long start=System.currentTimeMillis();   //获取开始时间
