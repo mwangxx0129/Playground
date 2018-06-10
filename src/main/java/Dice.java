@@ -1,8 +1,7 @@
 //写一个函数float sumPossibility(int dice, int target)，就是投dice个骰子，求最后和为target的概率。
 //        因为总共的可能性是6^dice，所以其实就是combination sum， 求dice个骰子有多少种组合，使其和为target。
 //        先用brute force的dfs来一个O(6^dice)指数复杂度的，
-//        然后要求优化，用dp，最后结束代码写的是两者结合的memorized search吧 ，
-//        面试官走的时候还说了句such a good solution。
+//        然后要求优化，用dp，最后结束代码写的是两者结合的memorized search吧
 public class Dice {
     public static void main(String[] args) {
 

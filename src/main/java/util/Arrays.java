@@ -45,4 +45,31 @@ public class Arrays {
         }
         return - (l + 1);
     }
+
+    public static String toString(int[] a) {
+        StringBuilder sb = new StringBuilder("(");
+        int lastIndex = a.length - 1;
+        for (int i = 0; i < a.length; ++ i) {
+            sb.append(a[i]);
+            if (i ==lastIndex) {
+                sb.append(")");
+            }
+            sb.append(",");
+        }
+        return sb.toString();
+    }
+
+    public static String toString(double[] a) {
+        StringBuilder sb = new StringBuilder("[");
+        int lastIndex = a.length - 1;
+        for (int i = 0; i < a.length; ++ i) {
+            sb.append(a[i]);
+            if (i ==lastIndex) {
+                return sb.append("]").toString();
+
+            }
+            sb.append(", ");
+        }
+        return sb.toString();
+    }
 }
