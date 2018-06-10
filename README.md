@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/mwangxx0129/Playground.svg?branch=master)](https://travis-ci.org/mwangxx0129/Playground)
+
 # Playground
 
 ## Graph
