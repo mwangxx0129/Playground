@@ -22,7 +22,6 @@ public class BlackJack {
         System.out.println(result);
 //        lostPro(0); // 4ms
 
-
         System.out.println(method_dp(0));
     }
 
@@ -48,12 +47,14 @@ public class BlackJack {
 
     public static double method_dp(int sum) {
         double[] dp = new double[22];
+        // 初始化第一次 抽牌 1-10 概率，均为0.1
         for (int i = 1; i <= 10; ++ i) {
             dp[i] = 0.1;
         }
+
         for (int i = 2; i < 22; ++ i) {
             for (int j = 1; j <= 10 && i - j > 0; ++ j) {
-                if (i - j >= 17) continue;
+                if (i - j >= 17) continue; // > 17 后不参与 抽牌
                 dp[i] += 1.0/10 * dp[i - j];
             }
         }
