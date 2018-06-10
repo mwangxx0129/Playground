@@ -25,6 +25,7 @@ public class BlackJack {
         System.out.println(method_dp(0));
     }
 
+    // DFS + Memo
     public static double lostProMM(int sum, Double[] mm) {
         if (sum >=17 && sum <= 21) return 0;
         if (sum > 21) return 1;
@@ -35,6 +36,7 @@ public class BlackJack {
         return mm[sum] = T;
     }
 
+    // DFS
     public static double lostPro(int sum) {
         if (sum >=17 && sum <= 21) return 0;
         if (sum > 21) return 1;
@@ -45,6 +47,7 @@ public class BlackJack {
         return T;
     }
 
+    // DP
     public static double method_dp(int sum) {
         double[] dp = new double[22];
         // 初始化第一次 抽牌 1-10 概率，均为0.1
