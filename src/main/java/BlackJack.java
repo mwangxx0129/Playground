@@ -22,6 +22,7 @@ public class BlackJack {
         System.out.println(result);
 //        lostPro(0); // 4ms
 
+        System.out.println(bottomUp());
         System.out.println(method_dp(0));
     }
 
@@ -61,7 +62,28 @@ public class BlackJack {
                 dp[i] += 1.0/10 * dp[i - j];
             }
         }
+        System.out.println(Arrays.toString(dp));
         return 1 - (dp[17] + dp[18] + dp[19] + dp[20] + dp[21]);
     }
 
+    public static double bottomUp() {
+        double[] dp = new double[22];
+        dp[0] = 1;
+        for (int i = 1; i <= 21; i++) {
+            int j = 1;
+            if (i > 17 && i <= 21) {
+                j = i - 17 - 1;
+            }
+            for (; j <= 10; j++) {
+                dp[i] += (i >= j ? dp[i - j] * 0.1 : 0);
+            }
+        }
+
+        double result = 0;
+        for(int i = 17; i <= 21; i++) {
+            result += dp[i];
+        }
+        System.out.println(Arrays.toString(dp));
+        return result;
+    }
 }

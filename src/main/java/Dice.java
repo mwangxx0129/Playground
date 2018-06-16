@@ -18,6 +18,14 @@ public class Dice {
     }
 
     // brute force dfs
+
+    /**
+     *
+     * @param level 第几个骰子
+     * @param target 当前完成骰子的和
+     * @param n 骰子个数
+     * @return
+     */
     public static double dfs(int level, int target, int n) {
         if (level == n && target == 0) return 1;
         if (level == n || target < 0) return 0;
