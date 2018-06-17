@@ -1,0 +1,110 @@
+06/17/2018
+李圈圈
+// package whatever; // don't place package name!
+
+import java.io.*;
+
+class MyCode {
+  // Example:
+  // input: 123
+  // output: one hundred twenty three
+  // //
+  //1001 one thousand one
+
+  // hundred, thousdan, million, billion
+
+  // 0 - > 20, 30 ,40 90
+  // 21 -> 20 + 1
+  // 123 -> one hundren, 20 -> 3
+
+  String[] units = {""", "thousand", "million", "billion"};
+  //1234567 -> one million twenty three hundren and four thousand 5 hund 6 -> 7
+  // 1,234,567
+  // 4 blocks -> 1234 | 4567
+  //"zero"
+  //
+  String[] maps = {"", "one", "two", "three", "four", "five", "six", "seven", "eight", "nign"};
+  String[] tensMap = {"", "ten", "twenty", ....};
+
+  public String printNumber(int number) {
+      if (number == 0) {
+        return "zero";
+      }
+    int unit = 0;
+    Sring res = "";
+    while (number > 0) {
+       //  1001
+      // 1000 % 1000 == 0
+      // 1000 /1000 = 1
+      // number = 1;  1 % 1000
+      // 123,456
+      // 123, 456
+      //  123, 456  %1000 -> 456
+     // helepr -> 456
+      //123456  / 1000 -> 123 , unit -> 1, number ->123
+      //
+      if (number % 1000 != 0) {
+          res = group(number % 1000) + units[unit] + res;
+      }
+      number /= 1000;
+      unit ++;
+    }
+    return res;
+
+  }
+
+
+  public String group(int number ) {
+    if (number == 0) {
+      return ""
+    }
+    if (number <= 19) {
+      return maps[number];
+    }
+
+    if (number >= 20 && number <= 99)
+      return tensMap[numder / 10] + " " + printNumber(num % 10);
+    }
+
+  if (number >= 100 && number < 999) {
+    return maps[number / 100] + "hundren" + printNumber(num % 100);
+  }
+
+//   if (number >= 1000 && number < 999999) {
+//     return printNumber[number / 1000] + "thousand " + printNumber(num % 10000);
+//   }
+
+//   if (number >= 1000000 && number < 999999999) {
+//     return printNumber[number / 1000000] + "million " + printNumber(num % 10000000);
+//   }
+//     if (number >= 1000000000 && number < 999999999999) {
+//     return printNumber[number / 1000000000] + "billion " + printNumber(num % 10000000000);
+//     }
+  }
+// printNumber(10);
+// 10 <= 19 -> ten
+// 23
+// 23 > 1= 20  20 / 10 -> 2 23 % 10 ->  3 3 twenty three
+// 12,345
+// 12345 / 1000 -> 12  twelvw thounaadd  12345 % 1000 -> 3 45
+// 32,123
+// 12,345   / 1000 -> 12  + units[1] +
+  public static void main (String[] args) {
+    System.out.println("Hello Java");
+
+  }
+}
+
+
+1. 边界条件 [0, 0x7fffffff]
+
+2. 用逗号隔开 123,456 groups i / 1000  group
+
+3. 写出来，解释
+
+// 123,456
+
+// 123 thou
+// 456
+
+
