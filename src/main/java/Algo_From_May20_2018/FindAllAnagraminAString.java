@@ -1,4 +1,4 @@
-package May20_2018;
+package Algo_From_May20_2018;
 
 import java.util.ArrayList;
 import java.util.List;

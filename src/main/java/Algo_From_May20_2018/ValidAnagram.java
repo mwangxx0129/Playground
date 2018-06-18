@@ -1,4 +1,4 @@
-package May20_2018;
+package Algo_From_May20_2018;
 
 public class ValidAnagram {
     public static void main(String[] args) {
