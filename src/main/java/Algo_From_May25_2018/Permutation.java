@@ -4,18 +4,28 @@ import java.util.*;
 public class Permutation {
     public static void main(String[] args) {
         int[] nums = {1,3,5};
-        List<List<Integer>> res = permutation(nums);
+        int[][] res = solution(nums);
         System.out.println(res);
+        System.out.println(Arrays.deepToString(res));
     }
-    public static List<List<Integer>> permutation(int[] nums) {
+
+
+    public static int[][] solution(int[] nums) {
         if (nums == null || nums.length == 0) {
-            return new ArrayList<>();
+            return new int[0][];
         }
         int len = nums.length;
         List<List<Integer>> res = new ArrayList<>();
         boolean[] visited = new boolean[len];
         dfs(new ArrayList<>(), visited, res, len, nums);
-        return res;
+        int[][] result = new int[res.size()][nums.length];
+        for (int index = 0; index < res.size(); ++ index) {
+            List<Integer> row = res.get(index);
+            for (int j = 0; j < nums.length; ++j) {
+                result[index][j] = row.get(j);
+            }
+        }
+        return result;
     }
 
     public static void dfs(List<Integer> list, boolean[] isVisited, List<List<Integer>> res, int len, int[] nums) {
