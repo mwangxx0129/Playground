@@ -7,8 +7,8 @@ JAR, WAR
 ## Introduction
 This Learning Project is to help xinxin understand jar, war and java development.
 * Ref: 
-- Basic operation of package jar/war: https://www.cnblogs.com/EasonJim/p/6481704.html?utm_source=itdadao&utm_medium=referral
-- Java JAR/WAR/EAR file folder explanation: http://www.cnblogs.com/EasonJim/p/6498804.html
+    Basic operation of package jar/war: https://www.cnblogs.com/EasonJim/p/6481704.html?utm_source=itdadao&utm_medium=referral
+    Java JAR/WAR/EAR file folder explanation: http://www.cnblogs.com/EasonJim/p/6498804.html
 
 ## Basic package jar ---  let's play code
 ### Coding, Compile & Run
