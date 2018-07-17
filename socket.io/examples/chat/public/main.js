@@ -10,6 +10,10 @@ $(function() {
   // Initialize variables
   var $window = $(window);
   var $usernameInput = $('.usernameInput'); // Input for username
+  var $roleInput = $('.roleInput'); // Input for role
+  var $topicInput = $('.topicInput'); // Input for topic
+  var $languageInput = $('.languageInput'); // Input for language
+
   var $messages = $('.messages'); // Messages area
   var $inputMessage = $('.inputMessage'); // Input message input box
 
@@ -18,6 +22,11 @@ $(function() {
 
   // Prompt for setting a username
   var username;
+  var role;
+  var topic;
+  var language;
+  var userInfo = {};
+
   var connected = false;
   var typing = false;
   var lastTypingTime;
@@ -38,6 +47,15 @@ $(function() {
   // Sets the client's username
   const setUsername = () => {
     username = cleanInput($usernameInput.val().trim());
+    role = cleanInput($roleInput.val().trim());
+    topic = cleanInput($topicInput.val().trim());
+    language = cleanInput($languageInput.val().trim());
+
+    userInfo["username"] = username;
+    userInfo["role"] = role;
+    userInfo["topic"] = topic;
+    userInfo["language"] = language;
+    console.log(userInfo);
 
     // If the username is valid
     if (username) {
