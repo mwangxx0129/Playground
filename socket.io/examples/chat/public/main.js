@@ -193,7 +193,8 @@ $(function() {
   $window.keydown(event => {
     // Auto-focus the current input when a key is typed
     if (!(event.ctrlKey || event.metaKey || event.altKey)) {
-      $currentInput.focus();
+      console.log('key dowb');
+      // $currentInput.focus();
     }
     // When the client hits ENTER on their keyboard
     if (event.which === 13) {
