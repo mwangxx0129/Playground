@@ -66,6 +66,13 @@ $(function() {
 
       // Tell the server your username
       socket.emit('add user', username);
+      if (role[0] === 's') {
+        console.log('[jquery]: new room', userInfo);
+        socket.emit('new room', userInfo);
+      } else {
+        socket.emit('allocate room', userInfo);
+      }
+      
     }
   }
 
