@@ -5,6 +5,9 @@ import com.mycompany.app.Model.DataExample;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 
 public class App 
@@ -27,5 +30,12 @@ public class App
         System.out.println( "Hello World!" );
         App app = new App();
         app.test();
+        String[] input = {"1","2","3","4","5", "6"};
+        List<String> list = new ArrayList<String>(Arrays.asList(input));
+        int count = 0;
+//        list.remove(1);
+        list.remove(count);
+
+        System.out.println(Arrays.toString(list.toArray()));
     }
 }
