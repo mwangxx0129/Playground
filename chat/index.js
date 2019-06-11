@@ -7,18 +7,20 @@ app.get('/', function(req, res){
 });
 
 io.on('connection', function(socket){
-    socket.broadcast.emit('chat message: ', 'new connect...');    
     console.log('a user connected');
 
     socket.on('disconnect', function(){
         console.log('user disconnected');
     });
 
-    socket.broadcast.emit('hi');
+    // socket.broadcast.emit('chat message', 'hi');
+
 
     socket.on('chat message', function(msg){
         io.emit('chat message', msg);
     });
+
+    // socket.emit('question', 'do you think so?', function (answer) {});
 });
 
 http.listen(3000, function(){
