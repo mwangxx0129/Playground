@@ -12,6 +12,8 @@ public class TT {
         System.out.println(index);
     }
 
+
+
     public static int binarySearch(int[] A, int target) {
         int l = 0, r = A.length - 1;
         java.util.Arrays.sort(A);
