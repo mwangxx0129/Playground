@@ -7,7 +7,7 @@
   "private": true,
   "license": "BSD",
   "dependencies": {
-    "engine.io": "^3.2.0",
+    "engine.io": "^4.1.2",
     "express": "^4.13.4",
     "socket.io": "^2.1.1"
   },
